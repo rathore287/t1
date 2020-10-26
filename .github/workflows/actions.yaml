@@ -6,6 +6,11 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Listing files
+        run: | 
+            ls
+            pwd
+            ls -a
       - name: JS Actions
         uses: actions/hello-world-javascript-action@v1
         with:
