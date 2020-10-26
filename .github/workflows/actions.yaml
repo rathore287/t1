@@ -11,6 +11,8 @@ jobs:
             ls
             pwd
             ls -a
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: JS Actions
         uses: actions/hello-world-javascript-action@v1
         with:
