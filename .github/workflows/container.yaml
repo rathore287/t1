@@ -21,11 +21,7 @@ jobs:
         with:
               entrypoint: ./script.sh
               args: "To someone out there."
-            
-     
-            
-
-
+ 
   node-docker:
     runs-on: ubuntu-latest
     services:
