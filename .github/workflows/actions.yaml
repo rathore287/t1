@@ -11,6 +11,8 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: Client Payload
+        run: echo ${{github.event.client_payload.env}}
       - name: Listing files
         run: | 
             ls
