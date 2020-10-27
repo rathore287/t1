@@ -18,10 +18,9 @@ jobs:
             
       - name: Checking node version again.
         uses: docker://node:12.14.1-alpine3.10
-        run: type -a node
-        # with:
-        #       entrypoint: usr/bin/node
-        #       args: -v
+        with:
+              entrypoint: usr/local/bin/node
+              args: -v
             
 
 
