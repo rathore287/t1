@@ -9,17 +9,14 @@ jobs:
       image: node:10.18.0-jessie
     steps:
       - name: Checking node version of first container
-        run: node -v
-      - name: Saying hello with docker and echo
-        uses: docker://node:12.14.1-alpine3.10
-        with:
-              entrypoint: /bin/echo
-              args: 'Hello everyone :)'     
+        run: | 
+          node -v
+          chmod +x ./script.sh  
       - uses: actions/checkout@v1        
       - name: Finding ways to say Hello
         uses: docker://node:12.14.1-alpine3.10
         with:
-              entrypoint: sh ./script.sh
+              entrypoint: ./script.sh
               args: "To someone out there."
  
   node-docker:
