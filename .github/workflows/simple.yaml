@@ -5,6 +5,7 @@ on: [push]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
         - name: Echoing something
           run: echo "Hello there!"
