@@ -9,7 +9,7 @@ jobs:
       image: node:10.18.0-jessie
     steps:
       - name: Checking node version of first container
-        run: node -v
+        run: type -a node
       - name: Saying hello with docker and echo
         uses: docker://node:12.14.1-alpine3.10
         with:
