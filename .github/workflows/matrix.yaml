@@ -8,9 +8,18 @@ jobs:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
         node: [6,8,10]
-      max-parallel: 5
+        exclude:
+          - os: ubuntu-latest
+            node-version: 6
+        include: 
+          - os: ubuntu-latest
+            node-version: 8
+            is_ubuntu_8: 'true'
+      max-parallel: 10
       fail-fast: true
     runs-on: ${{matrix.os}}
+    env:
+        is_ubuntu_8: ${{matrix.is_ubuntu_8}}
     steps:
       - name: Check node version
         run: node -v
@@ -18,4 +27,6 @@ jobs:
         with: 
           node-version: ${{matrix.node_version}}
       - name: Check node version again
-        run: node -v
+        run: |
+          node -v
+          echo $is_ubuntu_8
