@@ -43,6 +43,7 @@ jobs:
             pwd
             ls -a
       - name: JS Actions
+        id: greet
         uses: actions/hello-world-javascript-action@v1
         with:
               who-to-greet: Rad
