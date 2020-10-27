@@ -6,7 +6,7 @@ jobs:
   node-version:
     strategy:
       matrix:
-        os: [macos-lates, ubuntu-latest, windows-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node: [6,8,10]
       max-parallel: 5
       fail-fast: true
