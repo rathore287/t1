@@ -16,11 +16,7 @@ jobs:
               entrypoint: /bin/echo
               args: 'Hello everyone :)'
             
-      - name: Checking node version again.
-        uses: docker://node:12.14.1-alpine3.10
-        with:
-              entrypoint: ./
-              args: type -a node
+     
             
 
 
