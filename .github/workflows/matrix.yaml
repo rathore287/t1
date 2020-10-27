@@ -7,13 +7,13 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-        node: [6,8,10]
+        node_version: [6,8,10]
         exclude:
           - os: ubuntu-latest
-            node-version: 6
+            node_version: 6
         include: 
           - os: ubuntu-latest
-            node-version: 8
+            node_version: 8
             is_ubuntu_8: 'true'
       max-parallel: 10
       fail-fast: true
